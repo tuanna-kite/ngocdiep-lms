@@ -1,34 +1,44 @@
 package io.kite;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
-
     static void main(String[] args) {
-        List<String> studentIds = new ArrayList<>();
-        List<String> studentNames = new ArrayList<>();
+        Student an = new Student("S001", "An", "an@example.com");
+        Student binh = new Student("S002", "Binh", "binh@example.com");
+        Student chi = new Student("S003", "Chi", "chi@example.com");
 
-        List<String> courseIds = new ArrayList<>();
-        List<String> courseNames = new ArrayList<>();
-        List<Integer> courseMaxStudents = new ArrayList<>();
-        List<Integer> courseCurrentStudents = new ArrayList<>();
+        Course javaCourse = new Course("C001", "Java OOP Foundation", 2);
 
-        studentIds.add("S001");
-        studentNames.add("An");
+        System.out.println("=== Course Information Before Enrollment ===");
+        javaCourse.printCourseInfo();
 
-        courseIds.add("C001");
-        courseNames.add("Java Foundation");
-        courseMaxStudents.add(2);
-        courseCurrentStudents.add(0);
+        System.out.println();
 
-        int courseIndex = 0;
+        enrollAndPrintResult(javaCourse, an);
+        enrollAndPrintResult(javaCourse, binh);
+        enrollAndPrintResult(javaCourse, chi);
 
-        if (courseCurrentStudents.get(courseIndex) < courseMaxStudents.get(courseIndex)) {
-            courseCurrentStudents.set(courseIndex, courseCurrentStudents.get(courseIndex) + 1);
-            System.out.println(studentNames.get(0) + " enrolled in " + courseNames.get(0));
+        System.out.println();
+
+        System.out.println("=== Course Information After Enrollment ===");
+        javaCourse.printCourseInfo();
+
+        System.out.println();
+
+        javaCourse.printEnrolledStudents();
+
+        System.out.println();
+
+        System.out.println("=== Try to enroll the same student again ===");
+        enrollAndPrintResult(javaCourse, an);
+    }
+
+    private static void enrollAndPrintResult(Course course, Student student) {
+        boolean success = course.addStudent(student);
+
+        if (success) {
+            System.out.println(student.getName() + " enrolled in " + course.getName() + " successfully.");
         } else {
-            System.out.println("Course is full");
+            System.out.println(student.getName() + " could not enroll in " + course.getName() + ".");
         }
     }
 }
