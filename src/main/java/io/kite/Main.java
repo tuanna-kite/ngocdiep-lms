@@ -1,17 +1,35 @@
 package io.kite;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+import java.util.ArrayList;
+import java.util.List;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
+public class Main {
+
+    static void main(String[] args) {
+        List<String> studentIds = new ArrayList<>();
+        List<String> studentNames = new ArrayList<>();
+
+        List<String> courseIds = new ArrayList<>();
+        List<String> courseNames = new ArrayList<>();
+        List<Integer> courseMaxStudents = new ArrayList<>();
+        List<Integer> courseCurrentStudents = new ArrayList<>();
+
+        studentIds.add("S001");
+        studentNames.add("An");
+
+        courseIds.add("C001");
+        courseNames.add("Java Foundation");
+        courseMaxStudents.add(2);
+        courseCurrentStudents.add(0);
+
+        int courseIndex = 0;
+
+        if (courseCurrentStudents.get(courseIndex) < courseMaxStudents.get(courseIndex)) {
+            courseCurrentStudents.set(courseIndex, courseCurrentStudents.get(courseIndex) + 1);
+            System.out.println(studentNames.get(0) + " enrolled in " + courseNames.get(0));
+        } else {
+            System.out.println("Course is full");
         }
     }
 }
+
