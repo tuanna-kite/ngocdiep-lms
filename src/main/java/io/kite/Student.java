@@ -4,6 +4,7 @@ public class Student {
     private String id;
     private String name;
     private String email;
+    private String phone;
 
     public Student(String id, String name, String email) {
         this.id = id;
@@ -25,6 +26,14 @@ public class Student {
 
     public String getName() {
         return name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     @Override
