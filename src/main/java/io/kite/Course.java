@@ -26,21 +26,21 @@ public class Course {
         this.enrolledStudents = new ArrayList<>();
     }
 
-    public boolean addStudent(Student student) {
+    public EnrollmentResult addStudent(Student student) {
         if (student == null) {
-            return false;
+            return new EnrollmentResult(false, "Ivalidate Student.");
         }
 
         if (isFull()) {
-            return false;
+            return new EnrollmentResult(false, "Course full.");
         }
 
         if (hasStudent(student)) {
-            return false;
+            return new EnrollmentResult(false, "Student have already regíted this course.");
         }
 
         enrolledStudents.add(student);
-        return true;
+        return new EnrollmentResult(true, "Success");
     }
 
     public boolean isFull() {

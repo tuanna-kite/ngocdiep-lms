@@ -33,9 +33,9 @@ public class Main {
     }
 
     private static void enrollAndPrintResult(Course course, Student student) {
-        boolean success = course.addStudent(student);
+        EnrollmentResult result = course.addStudent(student);
 
-        if (success) {
+        if (result.isSuccess()) {
             System.out.println(student.getName() + " enrolled in " + course.getName() + " successfully.");
         } else {
             System.out.println(student.getName() + " could not enroll in " + course.getName() + ".");
