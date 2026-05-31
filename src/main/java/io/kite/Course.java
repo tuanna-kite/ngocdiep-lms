@@ -43,6 +43,16 @@ public class Course {
         return new EnrollmentResult(true, "Success");
     }
 
+    public void updateMaxStudents(int newMaxStudents) {
+        if (newMaxStudents <= 0) {
+            throw new IllegalArgumentException("Max students must be greater than 0");
+        }
+        if (newMaxStudents < enrolledStudents.size()) {
+            throw new IllegalArgumentException("Cannot reduce capacity below current enrollment count");
+        }
+        this.maxStudents = newMaxStudents;
+    }
+
     public boolean isFull() {
         return enrolledStudents.size() >= maxStudents;
     }
