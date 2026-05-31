@@ -10,6 +10,16 @@ public class Course {
     private List<Student> enrolledStudents;
 
     public Course(String id, String name, int maxStudents) {
+        if (id == null || id.trim().isEmpty()) {
+            throw new IllegalArgumentException("ID cannot be null or blank");
+        }
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or blank");
+        }
+        if (maxStudents <= 0) {
+            throw new IllegalArgumentException("Max students must be greater than 0");
+        }
+
         this.id = id;
         this.name = name;
         this.maxStudents = maxStudents;
