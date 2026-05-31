@@ -9,7 +9,7 @@ public class Main {
         Course javaCourse = new Course("C001", "Java OOP Foundation", 2);
 
         System.out.println("=== Course Information Before Enrollment ===");
-        javaCourse.printCourseInfo();
+        printCourseInfo(javaCourse);
 
         System.out.println();
 
@@ -20,11 +20,11 @@ public class Main {
         System.out.println();
 
         System.out.println("=== Course Information After Enrollment ===");
-        javaCourse.printCourseInfo();
+        printCourseInfo(javaCourse);
 
         System.out.println();
 
-        javaCourse.printEnrolledStudents();
+        printEnrolledStudents(javaCourse);
 
         System.out.println();
 
@@ -39,6 +39,26 @@ public class Main {
             System.out.println(student.getName() + " enrolled in " + course.getName() + " successfully.");
         } else {
             System.out.println(student.getName() + " could not enroll in " + course.getName() + ".");
+        }
+    }
+
+    private static void printCourseInfo(Course course) {
+        System.out.println("Course: " + course.getId() + " - " + course.getName());
+        System.out.println("Max students: " + course.getMaxStudents());
+        System.out.println("Enrolled students: " + course.getEnrollmentCount());
+        System.out.println("Available slots: " + course.getAvailableSlots());
+    }
+
+    private static void printEnrolledStudents(Course course) {
+        System.out.println("Students in course " + course.getName() + ":");
+
+        if (course.getEnrolledStudents().isEmpty()) {
+            System.out.println("No students enrolled yet.");
+            return;
+        }
+
+        for (Student student : course.getEnrolledStudents()) {
+            System.out.println("- " + student);
         }
     }
 }

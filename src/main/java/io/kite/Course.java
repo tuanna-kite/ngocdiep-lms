@@ -75,26 +75,6 @@ public class Course {
         return maxStudents - enrolledStudents.size();
     }
 
-    public void printCourseInfo() {
-        System.out.println("Course: " + id + " - " + name);
-        System.out.println("Max students: " + maxStudents);
-        System.out.println("Enrolled students: " + getEnrollmentCount());
-        System.out.println("Available slots: " + getAvailableSlots());
-    }
-
-    public void printEnrolledStudents() {
-        System.out.println("Students in course " + name + ":");
-
-        if (enrolledStudents.isEmpty()) {
-            System.out.println("No students enrolled yet.");
-            return;
-        }
-
-        for (Student student : enrolledStudents) {
-            System.out.println("- " + student);
-        }
-    }
-
     public String getId() {
         return id;
     }
