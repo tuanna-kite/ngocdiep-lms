@@ -95,7 +95,19 @@ public class Course {
         }
     }
 
+    public String getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public int getMaxStudents() {
+        return maxStudents;
+    }
+
+    public List<Student> getEnrolledStudents() {
+        return new ArrayList<>(enrolledStudents);
     }
 }
