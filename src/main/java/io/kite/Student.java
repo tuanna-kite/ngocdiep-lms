@@ -9,13 +9,13 @@ public class Student {
 
     public Student(String id, String name, String email) {
         if (id == null || id.trim().isEmpty()) {
-            throw new IllegalArgumentException("ID cannot be null or blank");
+            throw new IllegalArgumentException("Failed to create student: student id must not be blank.");
         }
         if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException("Name cannot be null or blank");
+            throw new IllegalArgumentException("Failed to create student: name must not be blank.");
         }
         if (email == null || email.trim().isEmpty()) {
-            throw new IllegalArgumentException("Email cannot be null or blank");
+            throw new IllegalArgumentException("Failed to create student: email must not be blank.");
         }
 
         this.id = id;
