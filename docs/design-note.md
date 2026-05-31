@@ -4,6 +4,7 @@
 
 - Student
 - Course
+- EnrollmentResult
 - Main
 
 ## 2. Responsibility
@@ -14,6 +15,9 @@
 ### Course
 Đại diện cho khóa học, lưu thông tin id, name, maxStudents và danh sách sinh viên đã đăng ký.
 
+### EnrollmentResult
+- Đóng gói dữ liệu kết quả của một phiên đăng ký, bao gồm trạng thái thành công và lý do chi tiết nếu fail
+
 ### Main
 Tạo object và chạy demo chương trình.
 
@@ -23,6 +27,7 @@ Tạo object và chạy demo chương trình.
 - Main gọi Course.addStudent(Student).
 - Course kiểm tra capacity và duplicate.
 - Course lưu Student nếu hợp lệ.
+- Main tiếp nhận EnrollmentResult, đọc và display message.
 
 
 ## 4. Điểm thiết kế còn chưa tốt
