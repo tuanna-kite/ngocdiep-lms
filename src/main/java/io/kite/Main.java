@@ -38,7 +38,7 @@ public class Main {
         if (result.isSuccess()) {
             System.out.println(student.getName() + " enrolled in " + course.getName() + " successfully.");
         } else {
-            System.out.println(student.getName() + " could not enroll in " + course.getName() + ".");
+            System.out.println(student.getName() + " could not enroll in " + course.getName() + ". Reason: " + result.getReason() + ".");
         }
     }
 
