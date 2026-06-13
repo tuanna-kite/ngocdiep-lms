@@ -78,7 +78,4 @@ Dùng static factory method `success()` và `failure()`
 
 ## 4. Điểm thiết kế còn chưa tốt
 
-- Course đang có method print, có thể sau này tách ra class khác.
-- addStudent chỉ trả true/false, chưa nói rõ lý do thất bại.
-- Chưa có custom exception.
-- Chưa có Enrollment object riêng.
+- `EnrollmentService` hiện giữ list courses để check conflict, nếu sau này có nhiều services khác cũng cần list này, nên tách ra một CourseRepository
