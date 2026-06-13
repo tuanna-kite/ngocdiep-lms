@@ -66,11 +66,14 @@ Dùng static factory method `success()` và `failure()`
 
 ## 3. Object collaboration
 
-- Main tạo Student và Course.
-- Main gọi Course.addStudent(Student).
-- Course kiểm tra capacity và duplicate.
-- Course lưu Student nếu hợp lệ.
-- Main tiếp nhận EnrollmentResult, đọc và display message.
+- ApplicationTest tạo Student, Course, EnrollmentPolicy, EnrollmentService, CourseReport
+- ApplicationTest gọi `EnrollmentService.register(student, course)`.
+- EnrollmentService gọi `EnrollmentPolicy.checkCanRegister(student, course, allCourses)`
+- EnrollmentPolicy kiểm tra rules, trả OperationResult
+- Nếu policy pass, EnrollmentService gọi `Course.registerEnrollment(student)`
+- Course tạo Enrollment object mới với status ACTIVE hoặc WAITLISTED theo capacity
+- Khi cancel hoặc changeCapacity, Course gọi `promoteWaitlistedStudentsIfPossible()` để tự động activate Enrollment đang waitlisted
+- CourseReport nhận Course, đọc danh sách Enrollment, format thành text
 
 
 ## 4. Điểm thiết kế còn chưa tốt
