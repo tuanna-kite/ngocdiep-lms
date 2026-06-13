@@ -53,6 +53,9 @@ Method `conflictsWith()` kiểm tra hai lịch trùng nhau
 ### EnrollmentPolicy
 Validate trước khi cho phép đăng ký: student có active ko, đã đăng ký chưa, course có mở ko, đủ prerequisite chưa, có trùng lịch không
 
+### EnrollmentService
+Nhận yêu cầu register/cancel, gọi EnrollmentPolicy kiểm tra trước, nếu pass thì cho Course xử lý. Giữ danh sách courses để kiểm tra schedule conflict
+
 ## 3. Object collaboration
 
 - Main tạo Student và Course.
