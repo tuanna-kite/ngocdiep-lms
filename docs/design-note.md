@@ -60,6 +60,10 @@ Nhận yêu cầu register/cancel, gọi EnrollmentPolicy kiểm tra trước, n
 Tách riêng text report ra khỏi Course
 Nhận Course và format output thành enrollment list
 
+### OperationResult
+Chứa các kết quả của operations: success, ErrorCode, message
+Dùng static factory method `success()` và `failure()`
+
 ## 3. Object collaboration
 
 - Main tạo Student và Course.
