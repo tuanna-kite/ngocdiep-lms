@@ -27,6 +27,8 @@
 
 ### Student
 Đại diện cho sinh viên, lưu thông tin id, name, email.
+Lưu status, và danh sách CourseCode đã hoàn thành
+changeEmail, suspend, activate, completeCourse
 
 ### Course
 Đại diện cho khóa học, lưu thông tin id, name, maxStudents và danh sách sinh viên đã đăng ký.
