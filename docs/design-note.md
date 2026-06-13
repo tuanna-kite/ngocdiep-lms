@@ -35,12 +35,6 @@ Tự quản lý changeEmail, suspend, activate, completeCourse
 Tự quản lý registerEnrollment, cancelEnrollment, changeCapacity, rename, open và closeRegistration
 Khi có slot trống (cancel hoặc tăng capacity), Course sẽ auto promote waitlisted students
 
-### EnrollmentResult
-- Đóng gói dữ liệu kết quả của một phiên đăng ký, bao gồm trạng thái thành công và lý do chi tiết nếu fail
-
-### Main
-Tạo object và chạy demo chương trình.
-
 ## 3. Object collaboration
 
 - Main tạo Student và Course.
