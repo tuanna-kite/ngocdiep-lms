@@ -2,10 +2,26 @@
 
 ## 1. Danh sách class
 
+### DomainClass
 - Student
 - Course
-- EnrollmentResult
-- Main
+- Enrollment
+### Value Object
+- StudentEmail
+- CourseCode
+- CourseSchedule
+### Enums
+- StudentStatus
+- EnrollmentStatus
+- CourseLevel
+- ErrorCode
+### Service
+- EnrollmentPolicy
+- EnrollmentService
+- CourseReport
+- OperationResult
+### Demo
+- ApplicationTest
 
 ## 2. Responsibility
 
