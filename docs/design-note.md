@@ -46,6 +46,10 @@ Validate format email khi khởi tạo.
 ### CourseCode
 Validate format của course code (match C001, C002...)
 
+### CourseSchedule
+Lưu lịch học (ngày, giờ bắt đầu, giờ kết thúc)
+Method `conflictsWith()` kiểm tra hai lịch trùng nhau
+
 ## 3. Object collaboration
 
 - Main tạo Student và Course.
