@@ -43,6 +43,9 @@ Có thể tự cancel hoặc activate từ waitlist
 ### StudentEmail
 Validate format email khi khởi tạo.
 
+### CourseCode
+Validate format của course code (match C001, C002...)
+
 ## 3. Object collaboration
 
 - Main tạo Student và Course.
