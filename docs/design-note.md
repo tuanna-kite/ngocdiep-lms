@@ -56,6 +56,10 @@ Validate trước khi cho phép đăng ký: student có active ko, đã đăng k
 ### EnrollmentService
 Nhận yêu cầu register/cancel, gọi EnrollmentPolicy kiểm tra trước, nếu pass thì cho Course xử lý. Giữ danh sách courses để kiểm tra schedule conflict
 
+### CourseReport
+Tách riêng text report ra khỏi Course
+Nhận Course và format output thành enrollment list
+
 ## 3. Object collaboration
 
 - Main tạo Student và Course.
