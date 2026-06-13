@@ -40,6 +40,9 @@ Khi có slot trống (cancel hoặc tăng capacity), Course sẽ auto promote wa
 Lưu ngày đăng ký và trạng thái (ACTIVE / WAITLISTED / CANCELLED)
 Có thể tự cancel hoặc activate từ waitlist
 
+### StudentEmail
+Validate format email khi khởi tạo.
+
 ## 3. Object collaboration
 
 - Main tạo Student và Course.
