@@ -50,6 +50,9 @@ Validate format của course code (match C001, C002...)
 Lưu lịch học (ngày, giờ bắt đầu, giờ kết thúc)
 Method `conflictsWith()` kiểm tra hai lịch trùng nhau
 
+### EnrollmentPolicy
+Validate trước khi cho phép đăng ký: student có active ko, đã đăng ký chưa, course có mở ko, đủ prerequisite chưa, có trùng lịch không
+
 ## 3. Object collaboration
 
 - Main tạo Student và Course.
